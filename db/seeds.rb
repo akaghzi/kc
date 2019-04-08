@@ -11,3 +11,6 @@ user.update(confirmation_token: nil, confirmed_at: Time.now)
 rescue
   Rails.logger.info "I can not create this user"
 end
+Role.create!(name: 'doctor', display_name: 'Doctor', description: 'Medical doctor fully qualified to despense medicine, advise etc', display_order: 1)
+Role.create!(name: 'paramedic', display_name: 'Paramedic', description: 'Para Medical staff member fully qualified to administermedicines, provide basic advice etc', display_order: 2)
+Role.create!(name: 'admin', display_name: 'Administrator', description: 'Administrator on website for the client', display_order: 100)

@@ -1,4 +1,8 @@
 <h1>
 	Welcome
 </h1>
-<%#= link_to 'Setup', new_company_path %>
+<% if current_user.company %>
+<%= link_to current_user.company.name, current_user.company %>
+<% else %>
+<%= link_to 'Setup', new_company_path %>
+<% end %>

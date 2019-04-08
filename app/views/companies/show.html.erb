@@ -1,0 +1,17 @@
+<div class="col-lg-6 card mt-3">
+	<div class="card-body">
+		<p>
+		  <strong>User:</strong>
+		  <%= @company.user.email %>
+		</p>
+
+		<p>
+		  <strong>Name:</strong>
+		  <%= @company.name %>
+		</p>
+
+		<%= link_to 'Edit', edit_company_path(@company) %> |
+		<%= link_to 'Back', root_path %>
+		
+	</div>
+</div>
