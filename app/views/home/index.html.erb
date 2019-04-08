@@ -1,8 +1,10 @@
 <h1>
 	Welcome
 </h1>
+<% if user_signed_in? %>
 <% if current_user.company %>
 <%= link_to current_user.company.name, current_user.company %>
 <% else %>
 <%= link_to 'Setup', new_company_path %>
+<% end %>
 <% end %>

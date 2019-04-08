@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'company_users/index'
   resources :companies
   devise_for :users, controllers: {
           sessions: 'users/sessions',

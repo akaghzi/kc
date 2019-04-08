@@ -9,5 +9,6 @@ class User < ApplicationRecord
   has_many :assignments
   has_many :roles, through: :roles
   has_one :company
+  
            
 end

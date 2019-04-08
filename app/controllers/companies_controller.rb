@@ -67,11 +67,13 @@ class CompaniesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_company
       @company = Company.find(params[:id])
+      authorize @company
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def company_params
       params.require(:company).permit(:user_id, :name)
+      
     end
     
     def assign_user_role
